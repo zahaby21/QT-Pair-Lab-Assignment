@@ -1,5 +1,12 @@
 #ifndef WELCOMEWINDOW_H
 #define WELCOMEWINDOW_H
+#include "loginwindow.h"
+#include "ui_loginwindow.h"
+#include "Users.h"
+#include "welcomewindow.h"
+#include "ui_welcomewindow.h"
+#include "registerwindow.h"
+#include "ui_registerwindow.h"
 
 #include <QDialog>
 
@@ -12,10 +19,17 @@ class WelcomeWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit WelcomeWindow(QWidget *parent = nullptr);
+    explicit WelcomeWindow(const QString &username, int age, QWidget *parent = nullptr);
     ~WelcomeWindow();
 
+private slots:
+    void on_logoutButton_clicked();
+
 private:
+    int w;
+    int h;
+    QString username;
+    int age;
     Ui::WelcomeWindow *ui;
 };
 

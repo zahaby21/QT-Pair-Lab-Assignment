@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="welcomelabel">
+  <widget class="QLabel" name="hellolabel">
    <property name="geometry">
     <rect>
      <x>50</x>
