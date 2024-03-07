@@ -16,7 +16,7 @@ WelcomeWindow::WelcomeWindow(const QString &username, int age, QWidget *parent)
     QString hellotext= "hello" + username + ageString;
     ui->hellolabel->setText(hellotext);
     ui->setupUi(this);
-    QPixmap pix ("/Users/adamrefaat/Desktop/QT-Pair-Lab-Assignment");
+    QPixmap pix ("/Users/adamrefaat/Downloads/QT-Pair-Lab-Assignment");
     int w= ui->imagelabel-> width();
     int h= ui->imagelabel-> height();
     ui->imagelabel->setPixmap(pix.scaled(w,h, Qt::KeepAspectRatio));
