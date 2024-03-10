@@ -12,14 +12,13 @@ WelcomeWindow::WelcomeWindow(const QString &username, int age, QWidget *parent)
     , username(username)
     , age(age)
 {
-    QString ageString= QString::number(age);
-    QString hellotext= "hello" + username + ageString;
-    ui->hellolabel->setText(hellotext);
+
     ui->setupUi(this);
-    QPixmap pix ("/Users/adamrefaat/Downloads/QT-Pair-Lab-Assignment");
-    int w= ui->imagelabel-> width();
-    int h= ui->imagelabel-> height();
-    ui->imagelabel->setPixmap(pix.scaled(w,h, Qt::KeepAspectRatio));
+    QString ageString= QString::number(age);
+    QString hellotext= "Hello " + username + " " + ageString;
+    ui->hellolabel->setText(hellotext);
+    QPixmap pix (":/Image/71T3b5xc2vL._AC_UF894,1000_QL80_.jpg");
+    ui->imagelabel->setPixmap(pix.scaled(351,221));
 }
 
 WelcomeWindow::~WelcomeWindow()

@@ -25,7 +25,7 @@ LoginWindow::~LoginWindow()
 
 void LoginWindow::on_LoginpushButton_clicked()
 {
-    for(int i=0; i<100; i++){
+    for(int i=0; i<usersCount; i++){
         if( ui->usernamelineEdit->text() == usernames[i] && ui->passwordlineEdit->text() == passwords[i]){
 
             int age= ages[i];
@@ -34,12 +34,10 @@ void LoginWindow::on_LoginpushButton_clicked()
         hide();
         WelcomeWindow* welcomewindow = new WelcomeWindow(username, age, this);
         welcomewindow->show();
-        usersCount++;
         }
     else{
         ui->errorlabel->setVisible(true);
     }
-    break;
 
 
 }

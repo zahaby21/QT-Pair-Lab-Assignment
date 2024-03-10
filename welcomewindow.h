@@ -26,11 +26,10 @@ private slots:
     void on_logoutButton_clicked();
 
 private:
-    int w;
-    int h;
+    Ui::WelcomeWindow *ui;
     QString username;
     int age;
-    Ui::WelcomeWindow *ui;
+
 };
 
 #endif // WELCOMEWINDOW_H
